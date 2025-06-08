@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not So Boring Startup</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: IBM Plex Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background-color: #111827; /* bg-gray-900 */
+            color: #F9FAFB; /* text-gray-50 */
+        }
+        .glow-on-hover {
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .glow-on-hover:hover {
+            box-shadow: 0 0 15px rgba(52, 211, 153, 0.6); /* emerald-400 glow */
+        }
+        .feature-card, .pricing-card {
+            border: 1px solid #374151; /* gray-700 */
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover, .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: #34D399; /* emerald-400 */
+        }
+        .pricing-card.popular {
+            border-color: #34D399; /* emerald-400 */
+            box-shadow: 0 0 20px rgba(52, 211, 153, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full bg-gray-900 bg-opacity-80 backdrop-blur-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold tracking-wider">
+                    <a href="#">Not So Boring Startup</a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="hover:text-green-400 transition-colors">Why Us?</a>
+                    <a href="#pricing" class="hover:text-green-400 transition-colors">Pricing</a>
+                    <a href="#contact" class="hover:text-green-400 transition-colors">Contact</a>
+                </nav>
+                <div class="hidden md:block">
+                    <a href="#pricing" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">Get Started</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+             <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#features" class="block py-2 px-4 text-sm hover:bg-gray-700 rounded">Why Us?</a>
+                <a href="#pricing" class="block py-2 px-4 text-sm hover:bg-gray-700 rounded">Pricing</a>
+                <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-700 rounded">Contact</a>
+                <a href="#" class="block mt-2 bg-green-600 text-center text-white font-medium py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="h-screen flex items-center justify-center text-center pt-20">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tighter mb-4">
+                    Cool software. <br/><span class="text-green-400">No pain.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+                    We make refreshingly simple tools that help you get your work done without the headaches. Finally, software that just works.
+                </p>
+                <a href="#pricing" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg text-lg glow-on-hover">
+                    See The Plans
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">What's The Big Deal?</h2>
+                    <p class="text-gray-400 mt-2">Here's what you can count on when you use our stuff.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-900 p-8 rounded-lg feature-card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-500/20 text-green-400 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Saves You Time</h3>
+                        <p class="text-gray-400">Our tools are intuitive and efficient, so you can stop wrestling with software and start doing what you love.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-900 p-8 rounded-lg feature-card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-500/20 text-green-400 mb-4">
+                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Zero Complications</h3>
+                        <p class="text-gray-400">No hidden fees, no confusing interfaces, and no bloated features you'll never use. Just the good stuff.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-900 p-8 rounded-lg feature-card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-500/20 text-green-400 mb-4">
+                           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Made By Humans</h3>
+                        <p class="text-gray-400">We're a small team that actually cares. When you need help, you'll talk to a real person who wants to help.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Pick Your Perfect Plan</h2>
+                    <p class="text-gray-400 mt-2">Simple pricing for everyone, from hobbyists to enterprises.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <!-- Pricing Card 1: Starter -->
+                    <div class="bg-gray-900 p-8 rounded-lg pricing-card flex flex-col">
+                        <h3 class="text-2xl font-semibold mb-2">Tinker</h3>
+                        <p class="text-gray-400 mb-6">For personal use & small projects.</p>
+                        <div class="text-4xl font-bold mb-6">$12<span class="text-lg font-normal text-gray-400">/yr</span></div>
+                        <ul class="space-y-3 text-gray-300 mb-8 flex-grow">
+                            <li class="flex items-center"><span class="text-green-400 mr-2">&#10003;</span> Core Features</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-2">&#10003;</span> Community Support</li>
+                        </ul>
+                        <a href="#" class="mt-auto w-full text-center bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">Start Tinkering</a>
+                    </div>
+                    <!-- Pricing Card 2: Pro (Popular) -->
+                    <div class="bg-gray-900 p-8 rounded-lg pricing-card popular flex flex-col">
+                        <h3 class="text-2xl font-semibold mb-2">Creator</h3>
+                        <p class="text-green-400 mb-6">For pros and growing teams.</p>
+                        <div class="text-4xl font-bold mb-6">$35<span class="text-lg font-normal text-gray-400">/yr</span></div>
+                        <ul class="space-y-3 text-gray-300 mb-8 flex-grow">
+                            <li class="flex items-center"><span class="text-green-400 mr-2">&#10003;</span> Every Software</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-2">&#10003;</span> Unlimited Projects</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-2">&#10003;</span> Advanced Features</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-2">&#10003;</span> Priority Email Support</li>
+                        </ul>
+                        <a href="#" class="mt-auto w-full text-center bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition-colors glow-on-hover">Become a Creator</a>
+                    </div>
+                    <!-- Pricing Card 3: Enterprise -->
+                    <div class="bg-gray-900 p-8 rounded-lg pricing-card flex flex-col">
+                        <h3 class="text-2xl font-semibold mb-2">Big Leagues</h3>
+                        <p class="text-gray-400 mb-6">For companies that need more.</p>
+                        <div class="text-4xl font-bold mb-6">Let's Talk</div>
+                        <ul class="space-y-3 text-gray-300 mb-8 flex-grow">
+                            <li class="flex items-center"><span class="text-green-400 mr-2">&#10003;</span> Everything in Creator</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-2">&#10003;</span> Dedicated Support</li>
+                            <li class="flex items-center"><span class="text-green-400 mr-2">&#10003;</span> Custom Onboarding</li>
+                        </ul>
+                        <a href="mailto:notsbs@atomicmail.io" class="mt-auto w-full text-center bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900">
+        <div class="container mx-auto px-6 py-12 text-center text-gray-400">
+            <h2 class="text-2xl font-bold mb-4">What are you waiting for?</h2>
+            <p class="mb-6">Drop us a line at <a href="mailto:notsbs@atomicmail.io" class="text-green-400 hover:underline">notsbs@atomicmail.io</a></p>
+            <p class="text-sm">&copy; 2025 Not So Boring Startup. All rights reserved. Go build something cool.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a, .container a[href^="#"]').forEach(link => {
+            link.addEventListener('click', () => {
+                // Check if the menu is open before trying to close it
+                if(!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
