@@ -1,11 +1,40 @@
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#eaedf1] px-10 py-3">
+        <div class="flex items-center gap-4 text-[#101418]">
+        <div class="size-4">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path></svg>
+        </div>
+        <h2 class="text-[#101418] text-lg font-bold leading-tight tracking-[-0.015em]">Not So Boring Startup</h2>
+        </div>
+        <div class="flex flex-1 justify-end gap-8">
+        <div class="flex items-center gap-9">
+            <a class="text-[#101418] text-sm font-medium leading-normal" href="/#features">Features</a>
+            <a class="text-[#101418] text-sm font-medium leading-normal" href="/#pricing">Pricing</a>
+            <a class="text-[#101418] text-sm font-medium leading-normal" href="/about">About</a>
+        </div>
+        <div class="flex gap-2">
+            <button
+            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#3f7fbf] text-gray-50 text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+            <span class="truncate">Start Free Trial</span>
+            </button>
+            <button
+            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#eaedf1] text-[#101418] text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+            <span class="truncate">Login</span>
+            </button>
+        </div>
+        </div>
+    </header>
+
+<slot />
 <footer class="flex justify-center">
           <div class="flex max-w-[960px] flex-1 flex-col">
             <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
               <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                <a class="text-[#4e7397] text-base font-normal leading-normal min-w-40" href="#">About Us</a>
-                <a class="text-[#4e7397] text-base font-normal leading-normal min-w-40" href="#">Contact</a>
-                <a class="text-[#4e7397] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
-                <a class="text-[#4e7397] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
+                <a class="text-[#4e7397] text-base font-normal leading-normal min-w-40" href="/about">About Us</a>
+                <a class="text-[#4e7397] text-base font-normal leading-normal min-w-40" href="/contact">Contact</a>
+                <a class="text-[#4e7397] text-base font-normal leading-normal min-w-40" href="/privacy-policy">Privacy Policy</a>
+                <a class="text-[#4e7397] text-base font-normal leading-normal min-w-40" href="/terms-of-service">Terms of Service</a>
               </div>
               <div class="flex flex-wrap justify-center gap-4">
                 <a href="x.com/notboringstartup" aria-label="Twitter">
@@ -36,7 +65,7 @@
                   </div>
                 </a>
               </div>
-              <p class="text-[#4e7397] text-base font-normal leading-normal">© 2024 Not So Boring Startup. All rights reserved.</p>
+              <p class="text-[#4e7397] text-base font-normal leading-normal">© 2025 Not So Boring Startup. All rights reserved.</p>
             </footer>
           </div>
         </footer>

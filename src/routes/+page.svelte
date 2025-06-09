@@ -6,33 +6,6 @@
 
 <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf3] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#0e141b]">
-            <div class="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path></svg>
-            </div>
-            <h2 class="text-[#0e141b] text-lg font-bold leading-tight tracking-[-0.015em]">Not So Boring Startup</h2>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#0e141b] text-sm font-medium leading-normal" href="#">Features</a>
-              <a class="text-[#0e141b] text-sm font-medium leading-normal" href="#">Pricing</a>
-              <a class="text-[#0e141b] text-sm font-medium leading-normal" href="#">Testimonials</a>
-            </div>
-            <div class="flex gap-2">
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#197fe5] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">Start Free Trial</span>
-              </button>
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#e7edf3] text-[#0e141b] text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">Login</span>
-              </button>
-            </div>
-          </div>
-        </header>
         <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div class="@container">
@@ -53,9 +26,9 @@
                   </div>
                   <div class="flex-wrap gap-3 flex justify-center">
                     <button
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#197fe5] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#197fe5] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]" on:click={() => { window.location.href = '#pricing'; }}
                     >
-                      <span class="truncate">Start Free Trial</span>
+                      <span class="truncate">Purchase Now</span>
                     </button>
                     <button
                       class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#e7edf3] text-[#0e141b] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
@@ -66,6 +39,7 @@
                 </div>
               </div>
             </div>
+            <section id ="features">
             <div class="flex flex-col gap-10 px-4 py-10 @container">
               <div class="flex flex-col gap-4">
                 <h1
@@ -125,6 +99,9 @@
                 </div>
               </div>
             </div>
+            </section>
+            <section id ="pricing">
+            <h1 class="text-[#0e141b] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px] px-4 py-10">Choose your preferred plan</h1>
             <div class="grid grid-cols-[repeat(auto-fit,minmax(228px,1fr))] gap-2.5 px-4 py-3 @3xl:grid-cols-4">
               <div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-[#d0dbe7] bg-slate-50 p-6">
                 <div class="flex flex-col gap-1">
@@ -247,6 +224,8 @@
                 </div>
               </div>
             </div>
+            </section>
+            <section id="testimonials">
             <h2 class="text-[#0e141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Customer Testimonials</h2>
             <div class="flex flex-col gap-8 overflow-x-hidden bg-slate-50 p-4">
               <div class="flex flex-col gap-3 bg-slate-50">
@@ -280,32 +259,10 @@
               {/each}
               
                 </div>
-            <div class="@container">
-              <div class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
-                <div class="flex flex-col gap-2 text-center">
-                  <h1
-                    class="text-[#0e141b] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
-                  >
-                    Ready to Get Started?
-                  </h1>
-                  <p class="text-[#0e141b] text-base font-normal leading-normal max-w-[720px">
-                    Join thousands of users who are already experiencing the benefits of Not So Boring Startup.
-                  </p>
-                </div>
-                <div class="flex flex-1 justify-center">
-                  <div class="flex justify-center">
-                    <button
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#197fe5] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow"
-                    >
-                      <span class="truncate">Start Free Trial</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
+            
+           </div>
+           </section>
             </div>
           </div>
-        </div>
-        
       </div>
     </div>
-</div>
